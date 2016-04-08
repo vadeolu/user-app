@@ -1,0 +1,9 @@
+<form>
+  <p>
+  {{input value=model.firstName placeholder="First Name"}}
+  {{input value=model.lastName placeholder="Last Name"}}
+  </p>
+  <p>
+    <button {{action "edit" model}}>Edit</button>
+  </p>
+</form>

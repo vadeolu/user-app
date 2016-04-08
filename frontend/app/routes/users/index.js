@@ -8,6 +8,9 @@ export default Ember.Route.extend({
   actions: {
     delete(user) {
       user.destroyRecord();
+    },
+    edit(user) {
+      this.transitionTo('users.edit', user)
     }
   }
 });

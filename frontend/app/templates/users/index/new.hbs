@@ -1,0 +1,13 @@
+<br>
+<div> {{model.status}} </div>
+
+<form>
+  <p>
+  {{input value=model.firstName placeholder="First Name"}}
+  {{input value=model.lastName placeholder="Last Name"}}
+  </p>
+  <p>
+    <button {{action "create" model}}>Add User</button>
+  </p>
+</form>
+

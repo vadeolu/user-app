@@ -1,5 +1,7 @@
 <h2> Current Users </h2>
 {{#each model as |user|}}
-  {{user-component user=user removeUser="delete" modifyUser="edit"}}
+  {{#if user.id}}
+    {{user-component user=user removeUser="delete" modifyUser="edit"}}
+  {{/if}}
 {{/each}}
 {{outlet}}

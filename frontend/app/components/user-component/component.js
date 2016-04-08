@@ -3,7 +3,10 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   actions: {
     deleteUser(user) {
-      this.sendAction('removeUser', user)
+      this.sendAction('removeUser', user);
+    },
+    editUser(user) {
+      this.sendAction('modifyUser', user);
     }
   }
 });
