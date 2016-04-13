@@ -1,5 +1,9 @@
 <div>
-<p> {{user.firstName}} {{user.lastName}} </p>
+  <p>
+    {{#link-to 'users.show' user}}
+       {{user.firstName}} {{user.lastName}}
+    {{/link-to}}
+  </p>
 <a href="#" {{action "deleteUser" user}}> Delete</a> |
 <a href="#" {{action "editUser" user }}> Edit</a>
 </div>

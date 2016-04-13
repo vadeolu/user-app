@@ -14,6 +14,10 @@ Router.map(function() {
     this.route('index', {path: ''}, function() {
       this.route('new', {path: ''});
     });
+
+    this.route('show', {
+      path: ':user_id'
+    });
   });
 });
 

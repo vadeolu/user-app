@@ -1,7 +1,9 @@
-<h2> Current Users </h2>
-{{#each model as |user|}}
-  {{#if user.id}}
-    {{user-component user=user removeUser="delete" modifyUser="edit"}}
-  {{/if}}
-{{/each}}
+<div class="users-index">
+  <h2> Current Users </h2>
+  {{#each model as |user|}}
+    {{#if user.id}}
+      {{user-component user=user removeUser="delete" modifyUser="edit"}}
+    {{/if}}
+  {{/each}}
+</div>
 {{outlet}}
