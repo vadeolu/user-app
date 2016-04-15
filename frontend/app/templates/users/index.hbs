@@ -2,7 +2,13 @@
   <h2> Current Users </h2>
   {{#each model as |user|}}
     {{#if user.id}}
-      {{user-component user=user removeUser="delete" modifyUser="edit"}}
+      <p>
+        {{#link-to 'users.show' user}}
+           {{user.firstName}} {{user.lastName}}
+        {{/link-to}}
+      </p>
+      <a href="#" {{action "delete" user}}> Delete</a> |
+      {{link-to "Edit" "users.edit" user}}
     {{/if}}
   {{/each}}
 </div>
