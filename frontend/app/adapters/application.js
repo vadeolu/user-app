@@ -1,5 +1,3 @@
-import ActiveModelAdapter from 'active-model-adapter';
-
-export default ActiveModelAdapter.extend({
+export default DS.JSONAPIAdapter.extend({
   host: 'http://localhost:3200'
 });

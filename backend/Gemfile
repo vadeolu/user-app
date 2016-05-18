@@ -5,7 +5,8 @@ gem 'rails-api'
 
 gem 'rack-cors'
 gem 'faker'
-gem "active_model_serializers", "~> 0.8.0"
+gem 'active_model_serializers', github: 'rails-api/active_model_serializers',
+                                tag: 'v0.10.0.rc4'
 
 
 group :development do
