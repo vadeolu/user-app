@@ -49,11 +49,12 @@ class BlogPostsController < ApplicationController
 
   private
 
-    def set_blog_post
-      @blog_post = BlogPost.find(params[:id])
-    end
+  def set_blog_post
+    @blog_post = BlogPost.find(params[:id])
+  end
 
-    def blog_post_params
-      params.require(:blog_post).permit(:title, :body, :user_id)
-    end
+  def blog_post_params
+    ActiveModelSerializer::Deserialization
+      .jsonapi_parse(params, only: [:title, :body])
+  end
 end

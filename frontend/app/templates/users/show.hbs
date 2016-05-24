@@ -2,5 +2,9 @@
   <p> {{model.firstName}} {{model.lastName}} </p>
 <a href="#" {{action "delete" model}}> Delete</a> |
 <a href="#" {{action "edit" model }}> Edit</a>
+  {{#each model.blogPosts as |post|}}
+    <h3>{{post.title}}</h3>
+    <p>{{post.body}}</p>
+  {{/each}}
 </div>
 

@@ -49,11 +49,12 @@ class UsersController < ApplicationController
 
   private
 
-    def set_user
-      @user = User.find(params[:id])
-    end
+  def set_user
+    @user = User.find(params[:id])
+  end
 
-    def user_params
-      params.fetch(:data).require(:attributes).permit(:first_name, :last_name)
-    end
+  def user_params
+    ActiveModelSerializers::Deserialization
+      .jsonapi_parse(params, only: [:first_name, :last_name])
+  end
 end
